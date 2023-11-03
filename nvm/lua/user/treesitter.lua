@@ -5,7 +5,7 @@ function M.config()
   local configs = require "nvim-treesitter.configs"
 
   configs.setup {
-    ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python", "c++" }, -- put the language you want in this array
+    ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python", "c++", "c" }, -- put the language you want in this array
     -- ensure_installed = "all", -- one of "all" or a list of languages
     ignore_install = { "" },                                                       -- List of parsers to ignore installing
     sync_install = false,                                                          -- install languages synchronously (only applied to `ensure_installed`)
@@ -17,7 +17,7 @@ function M.config()
     autopairs = {
       enable = true,
     },
-    indent = { enable = true, disable = { "python", "css" } },
+    indent = { enable = true, disable = { "python", "css", "c" } },
 
     context_commentstring = {
       enable = true,
